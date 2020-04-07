@@ -1,9 +1,102 @@
-html{
-    box-sizing: border-box;
+@import 'global';
+@import 'vars';
+
+.header__top-main{
+  background-color: $grey;
+}
+.header__top{
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+  align-items: center;
 }
 
-*,
-*::before,
-*::after{
-    box-sizing: inherit;
+.header__btn{
+  margin-left: auto;
+  margin-right: 215px;
+  background-color: $blue;
+  padding: 12px 18px;
+  border-radius: 20px;
+  font-size: 14px;
+  color: #fff;
+  cursor: pointer;
+}
+.header__profile{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 175px;
+  height: 50px;
+  &-wrap{
+    display: flex;
+    flex-direction: column;
+  }
+  &-name{
+    color: $text;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  & span{
+    color: $blue;
+    font-size: 15px;
+  }
+}
+
+.header__menu{
+  background-color: #fff;
+  &-inner{
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    align-items: center;
+  }
+}
+
+.menu{
+  display: flex;
+  &-list{
+    & li{
+      display: inline-block;
+      & + li{
+        margin-left: 32px;
+      }
+    }
+    & a{
+      text-transform: uppercase;
+      font-size: 15px;
+      font-weight:500;
+      color: $text;
+    }
+  }
+}
+
+.header__inner-form{
+  width: 360px;
+  position: relative;
+  & input{
+    width: 100%;
+    outline: none;
+    border : 1px solid #d9dfe5;
+    border-radius: 25px;
+    padding: 15px 70px 15px 22px;
+    &:focus{
+      border: 1px solid $blue;
+    }
+    &::placeholder{
+      color: #898f96;
+    }
+  }
+  & button{
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: $blue;
+    width: 70px;
+    height: 100%;
+    border: none;
+    border-radius: 25px;
+    &:focus{
+      outline: none;
+    }
+  }
 }
